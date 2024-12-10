@@ -1,6 +1,22 @@
 //noinspection Duplicates
 class Solutions {
+  // Best (so far)
+  twoSum101224_best(nums, target) {
+    const prevMap = new Map();
 
+    for (let i = 0; i < nums.length; i++) {
+      const diff = target - nums[i];
+      if (prevMap.has(diff)) {
+        return [prevMap.get(diff), i];
+      }
+
+      prevMap.set(nums[i], i);
+    }
+
+    return [];
+  }
+
+  // All solutions
   twoSum101224_4(nums, target) {
     const prevMap = new Map();
 

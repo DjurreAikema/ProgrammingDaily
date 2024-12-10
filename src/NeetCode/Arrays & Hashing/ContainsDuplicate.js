@@ -1,6 +1,11 @@
 //noinspection Duplicates
 class Solutions {
+  // Best (so far)
+  hasDuplicate_best(nums) {
+    return new Set(nums).size < nums.length;
+  }
 
+  // All solutions
   hasDuplicate091124(nums) {
     return new Set(nums).size < nums.length;
   }
