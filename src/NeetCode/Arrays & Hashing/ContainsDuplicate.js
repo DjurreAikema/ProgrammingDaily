@@ -1,3 +1,4 @@
+//noinspection Duplicates
 class Solutions {
 
   hasDuplicate091124(nums) {
