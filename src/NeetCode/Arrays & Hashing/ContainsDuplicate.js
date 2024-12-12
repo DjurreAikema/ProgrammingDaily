@@ -6,6 +6,10 @@ class Solutions {
   }
 
   // All solutions
+  hasDuplicate121224(nums) {
+    return new Set(nums).size < nums.length;
+  }
+
   hasDuplicate091124(nums) {
     return new Set(nums).size < nums.length;
   }
