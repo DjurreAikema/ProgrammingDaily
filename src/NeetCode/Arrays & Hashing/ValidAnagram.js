@@ -4,21 +4,31 @@ class Solutions {
   isAnagram_best(s, t) {
     if (s.length !== t.length) return false;
 
-    const count = new Array(26).fill(0);
+    const count = Array(26).fill(0);
     for (let i = 0; i < s.length; i++) {
       count[s.charCodeAt(i) - 'a'.charCodeAt(0)]++;
       count[t.charCodeAt(i) - 'a'.charCodeAt(0)]--;
     }
 
-    let res = true;
-    count.forEach(item => {
-      if (item !== 0) res = false;
-    });
-
-    return res;
+    return count.every(val => val === 0);
   }
 
   // All solutions
+  isAnagram121224(s, t) {
+    if (s.length !== t.length) return false;
+
+    const countS = new Map();
+    const countT = {};
+    for (let i = 0; i < s.length; i++) {
+      countS[s[i]] = (countS[s[i]] || 0) + 1;
+      countT[t[i]] = (countT[t[i]] || 0) + 1;
+    }
+    console.log(countS)
+    console.log(countT)
+    console.log(countS === countT)
+    return
+  }
+
   isAnagram101224(s, t) {
     if (s.length !== t.length) return false;
 
