@@ -1,4 +1,4 @@
-//import {alphaNum} from "../Helpers/Helpers.js";
+import {alphaNum} from "../Helpers/Helpers.js";
 
 //noinspection Duplicates
 class Solution {
