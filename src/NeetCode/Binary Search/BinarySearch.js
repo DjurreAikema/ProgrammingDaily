@@ -6,7 +6,7 @@ class Solutions {
 
     while (l <= r) {
       // Left + half the distance between L and R
-      let m = Math.floor(l + ((r - l) / 2));
+      const m = l + Math.floor(((r - l) / 2));
 
       if (nums[m] > target) {
         r = m - 1;
