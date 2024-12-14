@@ -26,6 +26,27 @@ class Solutions {
   }
 
   // All solutions
+  isValid141224(s) {
+    if (s.length < 2) return false;
+    let stack = [];
+    const closeToOpen = {
+      ')': '(',
+      ']': '[',
+      '}': '{',
+    }
+
+    for (let i = 0; i < s.length; i++) {
+      if (closeToOpen[s[i]]) {
+        const last = stack.pop();
+        if (closeToOpen[s[i]] !== last) return false;
+      } else {
+        stack.push(s[i]);
+      }
+    }
+
+    return stack.length === 0;
+  }
+
   isValid121224(s) {
     if (s.length < 2) return false;
     let stack = [];
