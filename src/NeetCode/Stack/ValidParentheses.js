@@ -26,6 +26,30 @@ class Solutions {
   }
 
   // All solutions
+  isValid151224(s) {
+    const stack = [];
+    const closeToOpen = {
+      ')': '(',
+      ']': '[',
+      '}': '{'
+    }
+
+    for (let c of s) {
+      // If c is a closing character
+      if (closeToOpen[c]) {
+        if (stack.length > 0 && stack[stack.length - 1] === closeToOpen[c]) {
+          stack.pop();
+        } else {
+          return false;
+        }
+      } else {
+        stack.push(c);
+      }
+    }
+
+    return stack.length === 0;
+  }
+
   isValid141224(s) {
     if (s.length < 2) return false;
     let stack = [];

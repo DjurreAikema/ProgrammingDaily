@@ -1,8 +1,8 @@
 import {alphaNum} from "../Helpers/Helpers.js";
-import {reverseListTestCases} from "../Helpers/TestCases.js";
+import {reverseListTestCases, validParenthesesTestCases} from "../Helpers/TestCases.js";
 
 //noinspection Duplicates
-export class Solution {
+class Solution {
 
 }
 

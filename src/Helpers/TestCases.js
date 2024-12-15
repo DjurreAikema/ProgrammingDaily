@@ -12,3 +12,12 @@ export function reverseListTestCases(sol) {
   let reversedList2 = sol.reverseList(list2);
   console.log(listToArray(reversedList2));
 }
+
+/**
+ * @param {Solution} sol
+ */
+export function validParenthesesTestCases(sol) {
+  console.log(sol.isValid("[]"), "true");
+  console.log(sol.isValid("([{}])"), "true");
+  console.log(sol.isValid("[(])"), "false");
+}
