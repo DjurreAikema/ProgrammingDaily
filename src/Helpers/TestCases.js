@@ -11,6 +11,26 @@ export function binarySearchTestCases(sol) {
 /**
  * @param {Solution} sol
  */
+export function mergeTwoSortedLinkedListsTestCases(sol) {
+  let list11 = arrayToList([1,2,4]);
+  let list12 = arrayToList([1,3,5]);
+  let mergedList = sol.mergeTwoLists(list11, list12);
+  console.log(listToArray(mergedList), "[1,1,2,3,4,5]");
+
+  let list21 = arrayToList([]);
+  let list22 = arrayToList([1,2]);
+  let mergedList2 = sol.mergeTwoLists(list21, list22);
+  console.log(listToArray(mergedList2), "[1,2]");
+
+  let list31 = arrayToList([]);
+  let list32 = arrayToList([]);
+  let mergedList3 = sol.mergeTwoLists(list31, list32);
+  console.log(listToArray(mergedList3), "[]");
+}
+
+/**
+ * @param {Solution} sol
+ */
 export function reverseListTestCases(sol) {
   let list = arrayToList([0, 1, 2, 3]);
   let reversedList = sol.reverseList(list);
