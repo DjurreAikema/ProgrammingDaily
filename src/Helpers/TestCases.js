@@ -29,3 +29,11 @@ export function bestTimeToBuyAndSellStockTestCases(sol) {
   console.log(sol.maxProfit([10, 1, 5, 6, 7, 1]), "6");
   console.log(sol.maxProfit([10, 8, 7, 5, 2]), "0");
 }
+
+/**
+ * @param {Solution} sol
+ */
+export function validAnagramTestCases(sol) {
+  console.log(sol.isAnagram("racecar", "carrace"), "true");
+  console.log(sol.isAnagram("jar", "jam"), "false");
+}
