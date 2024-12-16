@@ -3,6 +3,14 @@ import {arrayToList, listToArray} from "./DataStructures.js";
 /**
  * @param {Solution} sol
  */
+export function binarySearchTestCases(sol) {
+  console.log(sol.search([-1, 0, 2, 4, 6, 8], 4), "3");
+  console.log(sol.search([-1, 0, 2, 4, 6, 8], 3), "-1");
+}
+
+/**
+ * @param {Solution} sol
+ */
 export function reverseListTestCases(sol) {
   let list = arrayToList([0, 1, 2, 3]);
   let reversedList = sol.reverseList(list);
