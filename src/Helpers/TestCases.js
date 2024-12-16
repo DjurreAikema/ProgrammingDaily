@@ -21,3 +21,11 @@ export function validParenthesesTestCases(sol) {
   console.log(sol.isValid("([{}])"), "true");
   console.log(sol.isValid("[(])"), "false");
 }
+
+/**
+ * @param {Solution} sol
+ */
+export function bestTimeToBuyAndSellStockTestCases(sol) {
+  console.log(sol.maxProfit([10, 1, 5, 6, 7, 1]), "6");
+  console.log(sol.maxProfit([10, 8, 7, 5, 2]), "0");
+}
