@@ -1,13 +1,31 @@
 import {arrayToList, arrayToListWithCycle, listToArray} from "../DataStructures/LinkedList.js";
+import {arrayToTree, treeToArray} from "../DataStructures/BinaryTree.js";
+
+/**
+ * @param {Solution} sol
+ */
+export function invertBinaryTreeTestCases(sol) {
+  let tree1 = arrayToTree([1, 2, 3, 4, 5, 6, 7]);
+  let inverted1 = sol.invertTree(tree1);
+  console.log(treeToArray(inverted1), "[1,3,2,7,6,5,4]");
+
+  let tree2 = arrayToTree([3, 2, 1]);
+  let inverted2 = sol.invertTree(tree2);
+  console.log(treeToArray(inverted2), "[3,1,2]");
+
+  let tree3 = arrayToTree([]);
+  let inverted3 = sol.invertTree(tree3);
+  console.log(treeToArray(inverted3), "[]");
+}
 
 /**
  * @param {Solution} sol
  */
 export function linkedListCycleDetectionTestCases(sol) {
-  let head1 = arrayToListWithCycle([1,2,3,4], 1);
+  let head1 = arrayToListWithCycle([1, 2, 3, 4], 1);
   console.log(sol.hasCycle(head1), "true");
 
-  let head2 = arrayToListWithCycle([1,2], -1);
+  let head2 = arrayToListWithCycle([1, 2], -1);
   console.log(sol.hasCycle(head2), "false");
 }
 
@@ -23,13 +41,13 @@ export function binarySearchTestCases(sol) {
  * @param {Solution} sol
  */
 export function mergeTwoSortedLinkedListsTestCases(sol) {
-  let list11 = arrayToList([1,2,4]);
-  let list12 = arrayToList([1,3,5]);
+  let list11 = arrayToList([1, 2, 4]);
+  let list12 = arrayToList([1, 3, 5]);
   let mergedList = sol.mergeTwoLists(list11, list12);
   console.log(listToArray(mergedList), "[1,1,2,3,4,5]");
 
   let list21 = arrayToList([]);
-  let list22 = arrayToList([1,2]);
+  let list22 = arrayToList([1, 2]);
   let mergedList2 = sol.mergeTwoLists(list21, list22);
   console.log(listToArray(mergedList2), "[1,2]");
 
