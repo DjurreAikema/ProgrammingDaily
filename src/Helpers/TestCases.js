@@ -3,7 +3,7 @@ import {arrayToList, arrayToListWithCycle, listToArray} from "./DataStructures.j
 /**
  * @param {Solution} sol
  */
-export function cycleDetectionTestCases(sol) {
+export function linkedListCycleDetectionTestCases(sol) {
   let head1 = arrayToListWithCycle([1,2,3,4], 1);
   console.log(sol.hasCycle(head1), "true");
 
