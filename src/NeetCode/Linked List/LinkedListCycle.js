@@ -1,7 +1,20 @@
 //noinspection Duplicates
 class Solutions {
   // Best (so far)
+  hasCycle_best(head) {
+    let fast = head, slow = head;
 
+    while (fast !== null && fast.next !== null) {
+      fast = fast.next.next;
+      slow = slow.next;
+
+      if (fast === slow) {
+        return true;
+      }
+    }
+
+    return false;
+  }
 
   // All solutions
   hasCycle171224(head) {
