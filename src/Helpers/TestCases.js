@@ -1,4 +1,15 @@
-import {arrayToList, listToArray} from "./DataStructures.js";
+import {arrayToList, arrayToListWithCycle, listToArray} from "./DataStructures.js";
+
+/**
+ * @param {Solution} sol
+ */
+export function cycleDetectionTestCases(sol) {
+  let head1 = arrayToListWithCycle([1,2,3,4], 1);
+  console.log(sol.hasCycle(head1), "true");
+
+  let head2 = arrayToListWithCycle([1,2], -1);
+  console.log(sol.hasCycle(head2), "false");
+}
 
 /**
  * @param {Solution} sol
