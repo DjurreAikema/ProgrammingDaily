@@ -1,4 +1,4 @@
-import {arrayToList, arrayToListWithCycle, listToArray} from "./DataStructures.js";
+import {arrayToList, arrayToListWithCycle, listToArray} from "../DataStructures/LinkedList.js";
 
 /**
  * @param {Solution} sol
