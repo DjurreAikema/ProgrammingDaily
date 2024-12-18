@@ -19,6 +19,28 @@ class Solutions {
   }
 
   // All solutions
+  isPalindrome181224(s) {
+    let l = 0, r = s.length - 1;
+
+    while (l < r) {
+      while (l < r && !alphaNum(s.charAt(l))) {
+        l++;
+      }
+      while (r > l && !alphaNum(s.charAt(r))) {
+        r--;
+      }
+
+      if (s.charAt(l).toLowerCase() !== s.charAt(r).toLowerCase()) {
+        return false;
+      }
+
+      l++;
+      r--;
+    }
+
+    return true;
+  }
+
   isPalindrome121224(s) {
     let l = 0, r = s.length - 1;
     while (l < r) {

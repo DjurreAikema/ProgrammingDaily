@@ -4,6 +4,14 @@ import {arrayToTree, treeToArray} from "../DataStructures/BinaryTree.js";
 /**
  * @param {Solution} sol
  */
+export function validPalindromeTestCases(sol) {
+  console.log(sol.isPalindrome("Was it a car or a cat I saw?"), "True");
+  console.log(sol.isPalindrome("tab a cat"), "False");
+}
+
+/**
+ * @param {Solution} sol
+ */
 export function invertBinaryTreeTestCases(sol) {
   let tree1 = arrayToTree([1, 2, 3, 4, 5, 6, 7]);
   let inverted1 = sol.invertTree(tree1);

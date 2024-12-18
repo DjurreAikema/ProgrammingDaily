@@ -4,7 +4,7 @@ import {
   binarySearchTestCases, invertBinaryTreeTestCases, linkedListCycleDetectionTestCases,
   mergeTwoSortedLinkedListsTestCases,
   reverseListTestCases,
-  validAnagramTestCases,
+  validAnagramTestCases, validPalindromeTestCases,
   validParenthesesTestCases
 } from "../Helpers/TestCases.js";
 
