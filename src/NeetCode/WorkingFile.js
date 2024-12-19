@@ -2,8 +2,7 @@ import {alphaNum} from "../Helpers/Helpers.js";
 import {
   bestTimeToBuyAndSellStockTestCases,
   binarySearchTestCases, invertBinaryTreeTestCases, linkedListCycleDetectionTestCases,
-  mergeTwoSortedLinkedListsTestCases,
-  reverseListTestCases,
+  mergeTwoSortedLinkedListsTestCases, reverseLinkedListTestCases,
   validAnagramTestCases, validPalindromeTestCases,
   validParenthesesTestCases
 } from "../Helpers/TestCases.js";

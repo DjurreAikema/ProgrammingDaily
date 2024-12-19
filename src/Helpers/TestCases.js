@@ -68,7 +68,7 @@ export function mergeTwoSortedLinkedListsTestCases(sol) {
 /**
  * @param {Solution} sol
  */
-export function reverseListTestCases(sol) {
+export function reverseLinkedListTestCases(sol) {
   let list = arrayToList([0, 1, 2, 3]);
   let reversedList = sol.reverseList(list);
   console.log(listToArray(reversedList), "[3,2,1,0]");
