@@ -4,6 +4,17 @@ import {arrayToTree, treeToArray} from "../DataStructures/BinaryTree.js";
 /**
  * @param {Solution} sol
  */
+export function maximumDepthOfBinaryTreeTestCases(sol) {
+  let tree1 = arrayToTree([1,2,3,null,null,4]);
+  console.log(sol.maxDepth(tree1), "3");
+
+  let tree2 = arrayToTree([]);
+  console.log(sol.maxDepth(tree2), "0");
+}
+
+/**
+ * @param {Solution} sol
+ */
 export function validPalindromeTestCases(sol) {
   console.log(sol.isPalindrome("Was it a car or a cat I saw?"), "True");
   console.log(sol.isPalindrome("tab a cat"), "False");
