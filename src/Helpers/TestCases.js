@@ -4,6 +4,15 @@ import {arrayToTree, treeToArray} from "../DataStructures/BinaryTree.js";
 /**
  * @param {Solution} sol
  */
+export function twoSumTestCases(sol) {
+  console.log(sol.twoSum([3, 4, 5, 6], 7), "[0,1]");
+  console.log(sol.twoSum([4, 5, 6], 10), "[0,2]");
+  console.log(sol.twoSum([5, 5], 10), "[0,1]");
+}
+
+/**
+ * @param {Solution} sol
+ */
 export function containsDuplicateTestCases(sol) {
   console.log(sol.hasDuplicate([1, 2, 3, 3]), "True");
   console.log(sol.hasDuplicate([1, 2, 3, 4]), "False");
