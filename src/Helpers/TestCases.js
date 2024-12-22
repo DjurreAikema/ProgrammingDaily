@@ -4,6 +4,14 @@ import {arrayToTree, treeToArray} from "../DataStructures/BinaryTree.js";
 /**
  * @param {Solution} sol
  */
+export function containsDuplicateTestCases(sol) {
+  console.log(sol.hasDuplicate([1, 2, 3, 3]), "True");
+  console.log(sol.hasDuplicate([1, 2, 3, 4]), "False");
+}
+
+/**
+ * @param {Solution} sol
+ */
 export function maximumDepthOfBinaryTreeTestCases(sol) {
   let tree1 = arrayToTree([1,2,3,null,null,4]);
   console.log(sol.maxDepth(tree1), "3");
