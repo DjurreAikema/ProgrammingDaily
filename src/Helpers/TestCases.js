@@ -4,6 +4,14 @@ import {arrayToTree, treeToArray} from "../DataStructures/BinaryTree.js";
 /**
  * @param {Solution} sol
  */
+export function diameterOfBinaryTreeTestCases(sol) {
+  console.log(sol.diameterOfBinaryTree(arrayToTree([1,null,2,3,4,5])), "3");
+  console.log(sol.diameterOfBinaryTree(arrayToTree([1,2,3])), "2");
+}
+
+/**
+ * @param {Solution} sol
+ */
 export function twoSumTestCases(sol) {
   console.log(sol.twoSum([3, 4, 5, 6], 7), "[0,1]");
   console.log(sol.twoSum([4, 5, 6], 10), "[0,2]");
