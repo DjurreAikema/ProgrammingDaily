@@ -15,6 +15,19 @@ class Solutions {
   }
 
   // All solutions
+  reverseList271224(head) {
+    let curr = head, prev = null;
+
+    while (curr) {
+      let tempNext = curr.next;
+      curr.next = prev;
+      prev = curr;
+      curr = tempNext;
+    }
+
+    return prev;
+  }
+
   reverseList191224(head) {
     let prev = null, curr = head;
 
