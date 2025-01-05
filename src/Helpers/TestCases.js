@@ -4,6 +4,15 @@ import {arrayToTree, treeToArray} from "../DataStructures/BinaryTree.js";
 /**
  * @param {Solution} sol
  */
+export function balancedBinaryTreeTestCases(sol) {
+  console.log(sol.isBalanced(arrayToTree([1,2,3,null,null,4])), "true");
+  console.log(sol.isBalanced(arrayToTree([1,2,3,null,null,4,null,5])), "false");
+  console.log(sol.isBalanced(arrayToTree([])), "true");
+}
+
+/**
+ * @param {Solution} sol
+ */
 export function diameterOfBinaryTreeTestCases(sol) {
   console.log(sol.diameterOfBinaryTree(arrayToTree([1,null,2,3,4,5])), "3");
   console.log(sol.diameterOfBinaryTree(arrayToTree([1,2,3])), "2");
