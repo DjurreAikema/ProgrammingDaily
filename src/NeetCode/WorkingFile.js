@@ -1,5 +1,6 @@
 import {alphaNum} from "../Helpers/Helpers.js";
 import {
+  balancedBinaryTreeTestCases,
   bestTimeToBuyAndSellStockTestCases,
   binarySearchTestCases,
   containsDuplicateTestCases,
