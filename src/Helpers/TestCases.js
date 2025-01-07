@@ -4,6 +4,14 @@ import {arrayToTree, treeToArray} from "../DataStructures/BinaryTree.js";
 /**
  * @param {Solution} sol
  */
+export function subtreeOfAnotherTreeTestCases(sol) {
+  console.log(sol.isSubtree(arrayToTree([1,2,3,4,5]), arrayToTree([2,4,5])), "true");
+  console.log(sol.isSubtree(arrayToTree([1,2,3,4,5,null,null,6]), arrayToTree([2,4,5])), "false");
+}
+
+/**
+ * @param {Solution} sol
+ */
 export function sameBinaryTreeTestCases(sol) {
   console.log(sol.isSameTree(arrayToTree([1,2,3]), arrayToTree([1,2,3])), "true");
   console.log(sol.isSameTree(arrayToTree([4,7]), arrayToTree([4,null,7])), "false");

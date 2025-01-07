@@ -9,7 +9,7 @@ import {
   linkedListCycleDetectionTestCases,
   maximumDepthOfBinaryTreeTestCases,
   mergeTwoSortedLinkedListsTestCases,
-  reverseLinkedListTestCases, sameBinaryTreeTestCases,
+  reverseLinkedListTestCases, sameBinaryTreeTestCases, subtreeOfAnotherTreeTestCases,
   twoSumTestCases,
   validAnagramTestCases,
   validPalindromeTestCases,
