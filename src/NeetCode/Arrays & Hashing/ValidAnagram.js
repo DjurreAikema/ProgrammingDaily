@@ -14,6 +14,18 @@ class Solutions {
   }
 
   // All solutions
+  isAnagram070125(s, t) {
+    if (s.length !== t.length) return false;
+
+    const count = Array(26).fill(0);
+    for (let i = 0; i < s.length; i++) {
+      count[s.charCodeAt(i) - 'a'.charCodeAt(0)]++;
+      count[t.charCodeAt(i) - 'a'.charCodeAt(0)]--;
+    }
+
+    return count.every(val => val === 0);
+  }
+
   isAnagram231224(s, t) {
     if (s.length !== t.length) return false;
 
