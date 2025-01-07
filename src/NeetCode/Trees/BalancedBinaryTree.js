@@ -32,6 +32,36 @@ class Solutions {
   }
 
   // All solutions
+  isBalanced070125(root) {
+    if (root === null) return true;
+
+    const stack = [root];
+    const seen = new Map();
+    seen.set(null, 0);
+
+    while (stack.length) {
+      let node = stack[stack.length - 1];
+
+      if (node.left && !seen.has(node.left)) {
+        stack.push(node.left);
+      } else if (node.right && !seen.has(node.right)) {
+        stack.push(node.right);
+      } else {
+        node = stack.pop();
+
+        const leftHeight = seen.get(node.left);
+        const rightHeight = seen.get(node.right);
+
+        if (Math.abs(leftHeight - rightHeight) > 1) return false;
+
+        const height = 1 + Math.max(leftHeight, rightHeight);
+        seen.set(node, height);
+      }
+    }
+
+    return true;
+  }
+
   isBalanced050125(root) {
     if (root === null) return true;
 
