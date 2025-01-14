@@ -24,6 +24,28 @@ class Solutions {
   }
 
   // All solutions
+  isSubtree140125(root, subRoot) {
+    if (subRoot === null) return true;
+    if (root === null) return false;
+
+    if (this.sameTree(root, subRoot)) return true;
+    return (
+      this.isSubtree(root.left, subRoot)
+      || this.isSubtree(root.right, subRoot)
+    )
+  }
+
+  sameTree140125(root, subRoot) {
+    if (root === null && subRoot === null) return true;
+    if (root && subRoot && root.val === subRoot.val) {
+      return (
+        this.sameTree(root.left, subRoot.left)
+        && this.sameTree(root.right, subRoot.right)
+      )
+    }
+    return false;
+  }
+
   isSubtree100125(root, subRoot) {
     if (!subRoot) return true;
     if (!root) return false;
