@@ -13,25 +13,25 @@ export function climbingStairsTestCases(sol) {
  * @param {Solution} sol
  */
 export function subtreeOfAnotherTreeTestCases(sol) {
-  console.log(sol.isSubtree(arrayToTree([1,2,3,4,5]), arrayToTree([2,4,5])), "true");
-  console.log(sol.isSubtree(arrayToTree([1,2,3,4,5,null,null,6]), arrayToTree([2,4,5])), "false");
+  console.log(sol.isSubtree(arrayToTree([1, 2, 3, 4, 5]), arrayToTree([2, 4, 5])), "true");
+  console.log(sol.isSubtree(arrayToTree([1, 2, 3, 4, 5, null, null, 6]), arrayToTree([2, 4, 5])), "false");
 }
 
 /**
  * @param {Solution} sol
  */
 export function sameBinaryTreeTestCases(sol) {
-  console.log(sol.isSameTree(arrayToTree([1,2,3]), arrayToTree([1,2,3])), "true");
-  console.log(sol.isSameTree(arrayToTree([4,7]), arrayToTree([4,null,7])), "false");
-  console.log(sol.isSameTree(arrayToTree([1,2,3]), arrayToTree([1,3,2])), "false");
+  console.log(sol.isSameTree(arrayToTree([1, 2, 3]), arrayToTree([1, 2, 3])), "true");
+  console.log(sol.isSameTree(arrayToTree([4, 7]), arrayToTree([4, null, 7])), "false");
+  console.log(sol.isSameTree(arrayToTree([1, 2, 3]), arrayToTree([1, 3, 2])), "false");
 }
 
 /**
  * @param {Solution} sol
  */
 export function balancedBinaryTreeTestCases(sol) {
-  console.log(sol.isBalanced(arrayToTree([1,2,3,null,null,4])), "true");
-  console.log(sol.isBalanced(arrayToTree([1,2,3,null,null,4,null,5])), "false");
+  console.log(sol.isBalanced(arrayToTree([1, 2, 3, null, null, 4])), "true");
+  console.log(sol.isBalanced(arrayToTree([1, 2, 3, null, null, 4, null, 5])), "false");
   console.log(sol.isBalanced(arrayToTree([])), "true");
 }
 
@@ -39,8 +39,8 @@ export function balancedBinaryTreeTestCases(sol) {
  * @param {Solution} sol
  */
 export function diameterOfBinaryTreeTestCases(sol) {
-  console.log(sol.diameterOfBinaryTree(arrayToTree([1,null,2,3,4,5])), "3");
-  console.log(sol.diameterOfBinaryTree(arrayToTree([1,2,3])), "2");
+  console.log(sol.diameterOfBinaryTree(arrayToTree([1, null, 2, 3, 4, 5])), "3");
+  console.log(sol.diameterOfBinaryTree(arrayToTree([1, 2, 3])), "2");
 }
 
 /**
@@ -64,7 +64,7 @@ export function containsDuplicateTestCases(sol) {
  * @param {Solution} sol
  */
 export function maximumDepthOfBinaryTreeTestCases(sol) {
-  let tree1 = arrayToTree([1,2,3,null,null,4]);
+  let tree1 = arrayToTree([1, 2, 3, null, null, 4]);
   console.log(sol.maxDepth(tree1), "3");
 
   let tree2 = arrayToTree([]);
@@ -113,6 +113,7 @@ export function linkedListCycleDetectionTestCases(sol) {
 export function binarySearchTestCases(sol) {
   console.log(sol.search([-1, 0, 2, 4, 6, 8], 4), "3");
   console.log(sol.search([-1, 0, 2, 4, 6, 8], 3), "-1");
+  console.log(sol.search([-1, 0, 3, 5, 9, 12], 9), "4");
 }
 
 /**
