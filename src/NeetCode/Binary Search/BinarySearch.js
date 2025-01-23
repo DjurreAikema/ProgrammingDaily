@@ -21,6 +21,23 @@ class Solutions {
   }
 
   // All solutions
+  search230125(nums, target) {
+    let l = 0, r = nums.length - 1;
+
+    while (l <= r) {
+      const m = 1 + Math.floor((r - l) / 2);
+      if (nums[m] < target) {
+        l = r + 1;
+      } else if (nums[m] > target) {
+        r = l - 1;
+      } else {
+        return m;
+      }
+    }
+
+    return -1;
+  }
+
   search040125(nums, target) {
     let l = 0, r = nums.length - 1;
 
