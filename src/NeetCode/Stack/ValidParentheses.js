@@ -26,6 +26,30 @@ class Solutions {
   }
 
   // All solutions
+  isValid060225(s) {
+    const stack = [];
+    const closeToOpen = {
+      ')': '(',
+      '}': '{',
+      ']': '[',
+    }
+
+    for (let c of s) {
+      // c is a closing bracket
+      if (closeToOpen[c]) {
+        if (stack[stack.length - 1] === closeToOpen[c]) {
+          stack.pop();
+        } else {
+          return false;
+        }
+      } else {
+        stack.push(c);
+      }
+    }
+
+    return stack.length === 0;
+  }
+
   isValid040125(s) {
     const stack = [];
     const closeToOpen = {
