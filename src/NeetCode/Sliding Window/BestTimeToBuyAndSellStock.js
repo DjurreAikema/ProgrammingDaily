@@ -20,6 +20,23 @@ class Solutions {
   }
 
   // All solutions
+  maxProfit100425(prices) {
+    let l = 0, r = 1;
+    let maxProfit = 0;
+
+    while (r < prices.length) {
+      if (prices[r] < prices[l]) {
+        l = r;
+      } else {
+        const diff = prices[r] - prices[l];
+        if (diff > maxProfit) maxProfit = diff;
+      }
+      r++;
+    }
+
+    return maxProfit;
+  }
+
   maxProfit210125(prices) {
     let l = 0, r = 1;
     let maxProfit = 0;
