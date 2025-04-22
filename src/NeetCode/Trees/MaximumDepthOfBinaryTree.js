@@ -21,6 +21,25 @@ class Solutions {
   }
 
   // All solutions
+  maxDepth_220425_hard(root) {
+    const stack = [[root, 1]];
+    let maxDepth = 0;
+
+    while (stack.length) {
+      const curr = stack.pop();
+      const node = curr[0];
+      const depth = curr[1];
+
+      if (node !== null) {
+        maxDepth = Math.max(maxDepth, depth);
+        stack.push([node.left, depth + 1]);
+        stack.push([node.right, depth + 1]);
+      }
+    }
+
+    return maxDepth;
+  }
+
   maxDepth240125(root) {
     const stack = [[root, 1]];
     let maxDepth = 0;
