@@ -5,6 +5,10 @@ class Solutions {
     if (s.length !== t.length) return false;
 
     const count = Array(26).fill(0);
+    // When we do s.charCodeAt(i) - 'a'.charCodeAt(0), we're essentially calculating:
+    // For 'a': 97 - 97 = 0
+    // For 'b': 98 - 97 = 1
+    // For 'c': 99 - 97 = 2
     for (let i = 0; i < s.length; i++) {
       count[s.charCodeAt(i) - 'a'.charCodeAt(0)]++;
       count[t.charCodeAt(i) - 'a'.charCodeAt(0)]--;
@@ -14,6 +18,18 @@ class Solutions {
   }
 
   // All solutions
+  isAnagram_250425_hard(s, t) {
+    if (s.length !== t.length) return false;
+
+    const count = Array(26).fill(0);
+    for (let i = 0; i < s.length; i++) {
+      count[s.charCodeAt(i) - 'a'.charCodeAt(0)]++;
+      count[t.charCodeAt(i) - 'a'.charCodeAt(0)]--;
+    }
+
+    return count.every(val => val === 0);
+  }
+
   isAnagram070125(s, t) {
     if (s.length !== t.length) return false;
 
@@ -49,7 +65,7 @@ class Solutions {
 
     return count.every(val => val === 0);
   }
-  
+
   isAnagram161224(s, t) {
     // Given two strings s and t, return true if the two strings are anagrams of each other, otherwise return false.
 
