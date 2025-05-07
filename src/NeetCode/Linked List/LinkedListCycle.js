@@ -17,6 +17,21 @@ class Solutions {
   }
 
   // All solutions
+  hasCycle_060525_good(head) {
+    let slow = head, fast = head;
+
+    while (fast !== null && fast.next !== null) {
+      slow = slow.next;
+      fast = fast.next.next;
+
+      if (slow === fast) {
+        return true;
+      }
+    }
+
+    return false;
+  }
+
   hasCycle180325(head) {
     let fast = head, slow = head;
 

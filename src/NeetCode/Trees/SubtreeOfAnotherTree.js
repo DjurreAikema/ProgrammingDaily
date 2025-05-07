@@ -24,7 +24,7 @@ class Solutions {
   }
 
   // All solutions
-  isSubtree_070525_good(root, subRoot) {
+  isSubtree_020525_hard(root, subRoot) {
     if (!subRoot) return true;
     if (!root) return false;
 
@@ -35,12 +35,12 @@ class Solutions {
     )
   }
 
-  sameTree_070525_good(root, sub) {
+  sameTree_020525_hard(root, sub) {
     if (!root && !sub) return true;
     if (root && sub && root.val === sub.val) {
       return (
-        this.sameTree(root.right, sub.right)
-        && this.sameTree(root.left, sub.left)
+        this.sameTree(root.left, sub.left)
+        && this.sameTree(root.right, sub.right)
       );
     }
     return false;
