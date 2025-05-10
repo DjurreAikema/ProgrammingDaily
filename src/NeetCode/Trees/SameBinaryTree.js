@@ -22,6 +22,26 @@ class Solutions {
   }
 
   // All solutions
+  isSameTree_100525_hard(p, q) {
+    const q1 = [p];
+    const q2 = [q];
+
+    while (q1.length && q2.length) {
+      let nodeQ = q1.pop();
+      let nodeP = q2.pop();
+
+      if (nodeP === null && nodeQ === null) continue;
+      if (nodeP === null || nodeQ === null || nodeP.val !== nodeQ.val) return false;
+
+      q1.push(nodeQ.left);
+      q1.push(nodeQ.right);
+      q2.push(nodeP.left);
+      q2.push(nodeP.right);
+    }
+
+    return true;
+  }
+
   isSameTree_060525_good(p, q) {
     const q1 = [p];
     const q2 = [q];
