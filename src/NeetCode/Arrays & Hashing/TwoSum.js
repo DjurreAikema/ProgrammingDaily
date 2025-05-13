@@ -17,6 +17,21 @@ class Solutions {
   }
 
   // All solutions
+  twoSum_130525_hard(nums, target) {
+    let l = 0, r = nums.length - 1;
+    let prevMap = new Map();
+
+    for (let i = 0; i < nums.length; i++) {
+      const diff = target - nums[i];
+
+      if (prevMap.has(diff)) {
+        return [prevMap.get(diff), i];
+      }
+
+      prevMap.set(nums[i], i);
+    }
+  }
+
   twoSum_090525_hard(nums, target) {
     const prevMap = new Map();
 
@@ -50,7 +65,7 @@ class Solutions {
   twoSum221224(nums, target) {
     const prevMap = new Map();
 
-    for (let i = 0; i < nums.length; i ++) {
+    for (let i = 0; i < nums.length; i++) {
       const diff = target - nums[i];
 
       if (prevMap.has(diff)) {
@@ -62,7 +77,7 @@ class Solutions {
   }
 
   twoSum141224(nums, target) {
-    const prevMap =  new Map();
+    const prevMap = new Map();
 
     for (let i = 0; i < nums.length; i++) {
       const diff = target - nums[i];
