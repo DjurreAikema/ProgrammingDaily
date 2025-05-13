@@ -4,6 +4,18 @@ import {arrayToTree, treeToArray} from "../DataStructures/BinaryTree.js";
 /**
  * @param {Solution} sol
  */
+export function kthLargestElementInStreamTestCases(sol) {
+  const kthLargest = new sol.KthLargest(3, [1, 2, 3, 3]);
+  console.log(kthLargest.add(3), "3");
+  console.log(kthLargest.add(5), "3");
+  console.log(kthLargest.add(6), "3");
+  console.log(kthLargest.add(7), "5");
+  console.log(kthLargest.add(8), "6");
+}
+
+/**
+ * @param {Solution} sol
+ */
 export function climbingStairsTestCases(sol) {
   console.log(sol.climbStairs(2), "2");
   console.log(sol.climbStairs(3), "3");
