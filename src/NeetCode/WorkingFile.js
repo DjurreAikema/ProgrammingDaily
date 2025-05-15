@@ -5,7 +5,7 @@ import {
   binarySearchTestCases, climbingStairsTestCases,
   containsDuplicateTestCases,
   diameterOfBinaryTreeTestCases,
-  invertBinaryTreeTestCases, kthLargestElementInStreamTestCases,
+  invertBinaryTreeTestCases, kthLargestElementInStreamTestCases, lastStoneWeightTestCases,
   linkedListCycleDetectionTestCases,
   maximumDepthOfBinaryTreeTestCases,
   mergeTwoSortedLinkedListsTestCases,
@@ -16,7 +16,7 @@ import {
   validParenthesesTestCases
 } from "../Helpers/TestCases.js";
 import {arrayToTree} from "../DataStructures/BinaryTree.js";
-import {MinPriorityQueue} from '@datastructures-js/priority-queue';
+import {MaxPriorityQueue, MinPriorityQueue} from '@datastructures-js/priority-queue';
 
 //noinspection Duplicates
 class Solution {

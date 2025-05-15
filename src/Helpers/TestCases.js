@@ -4,6 +4,15 @@ import {arrayToTree, treeToArray} from "../DataStructures/BinaryTree.js";
 /**
  * @param {Solution} sol
  */
+export function lastStoneWeightTestCases(sol) {
+  console.log(sol.lastStoneWeight([2, 3, 6, 2, 4]), "1");
+  console.log(sol.lastStoneWeight([1, 2]), "1");
+  console.log(sol.lastStoneWeight([2, 2]), "0");
+}
+
+/**
+ * @param {Solution} sol
+ */
 export function kthLargestElementInStreamTestCases(sol) {
   const kthLargest = new sol.KthLargest(3, [1, 2, 3, 3]);
   console.log(kthLargest.add(3), "3");
