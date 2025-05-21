@@ -19,6 +19,22 @@ class Solutions {
   }
 
   // All solutions
+  invertTree_210525_hard(root) {
+    const stack = [root];
+
+    while (stack.length) {
+      let node = stack.pop();
+
+      if (node !== null) {
+        [node.left, node.right] = [node.right, node.left];
+        stack.push(node.left);
+        stack.push(node.right);
+      }
+    }
+
+    return root;
+  }
+
   invertTree_080525_hard(root) {
     if (!root) return null;
     const queue = [root];
