@@ -1,6 +1,6 @@
-//noinspection Duplicates
 import {MaxPriorityQueue} from "@datastructures-js/priority-queue";
 
+//noinspection Duplicates
 class Solutions {
   // Best (so far)
   lastStoneWeight_best(stones) {
@@ -23,6 +23,25 @@ class Solutions {
   }
 
   // All solutions
+  lastStoneWeight_230525_good(stones) {
+    const maxHeap = new MaxPriorityQueue();
+
+    for (const stone of stones) {
+      maxHeap.enqueue(stone);
+    }
+
+    while (maxHeap.size() > 1) {
+      const stone1 = maxHeap.dequeue();
+      const stone2 = maxHeap.dequeue();
+
+      if (stone1 !== stone2) {
+        maxHeap.enqueue(stone1 - stone2);
+      }
+    }
+
+    return maxHeap.size() === 1 ? maxHeap.dequeue() : 0;
+  }
+
   lastStoneWeight_210525_good(stones) {
     this.maxHeap = new MaxPriorityQueue();
 
