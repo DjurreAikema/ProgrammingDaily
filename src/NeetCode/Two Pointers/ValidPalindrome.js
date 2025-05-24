@@ -1,5 +1,3 @@
-import {alphaNum} from "../../Helpers/Helpers";
-
 //noinspection Duplicates
 class Solutions {
   // Best (so far)
@@ -130,8 +128,8 @@ class Solutions {
     let l = 0, r = s.length - 1;
 
     while (l < r) {
-      while(l < r && !alphaNum(s[l])) l++;
-      while(r > l && !alphaNum(s[r])) r--;
+      while (l < r && !alphaNum(s[l])) l++;
+      while (r > l && !alphaNum(s[r])) r--;
 
       if (s[l].toLowerCase() !== s[r].toLowerCase()) return false;
       l++;
