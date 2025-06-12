@@ -99,6 +99,7 @@ export function validPalindromeTestCases(sol) {
   console.log(sol.isPalindrome("Was it a car or a cat I saw?"), "True");
   console.log(sol.isPalindrome("tab a cat"), "False");
   console.log(sol.isPalindrome("ab"), "False");
+  console.log(sol.isPalindrome("No lemon, no melon"), "True");
 }
 
 /**
