@@ -18,6 +18,18 @@ class Solutions {
   }
 
   // All solutions
+  isAnagram_130625_good(s, t) {
+    if (s.length !== t.length) return false;
+
+    const count = new Int32Array(26).fill(0);
+    for (let i = 0; i < s.length; i++) {
+      count[s.charCodeAt(i) - 'a'.charCodeAt(0)]++;
+      count[t.charCodeAt(i) - 'a'.charCodeAt(0)]--;
+    }
+
+    return count.every(val => val === 0);
+  }
+
   isAnagram_210525_hard(s, t) {
     if (s.length !== t.length) return false;
 
