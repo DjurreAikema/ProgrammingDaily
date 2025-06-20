@@ -23,6 +23,25 @@ class Solutions {
   }
 
   // All solutions
+  lastStoneWeight_200625_good(stones) {
+    this.maxHeap = new MaxPriorityQueue();
+
+    for (const stone of stones) {
+      this.maxHeap.enqueue(stone);
+    }
+
+    while (this.maxHeap.size() > 1) {
+      const stone1 = this.maxHeap.dequeue();
+      const stone2 = this.maxHeap.dequeue();
+
+      if (stone1 !== stone2) {
+        this.maxHeap.enqueue(stone1 - stone2);
+      }
+    }
+
+    return this.maxHeap.size() === 1 ? this.maxHeap.dequeue() : 0;
+  }
+
   lastStoneWeight_060625_good(stones) {
     const maxHeap = new MaxPriorityQueue();
 
