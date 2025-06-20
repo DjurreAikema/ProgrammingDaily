@@ -3,7 +3,7 @@ class Solutions {
   // Bubble sort repeatedly swaps adjacent elements if they're in the wrong order.
   // It's simple but not very efficient for large datasets.
   bubbleSort_best(arr) {
-    for (let i = 0; i < arr.length - 1; i ++) {
+    for (let i = 0; i < arr.length - 1; i++) {
       for (let j = 0; j < arr.length - 1 - i; j++) {
         if (arr[j] > arr[j + 1])
           [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
@@ -14,6 +14,16 @@ class Solutions {
   }
 
   // All solutions
+  bubbleSort_200625_good(nums) {
+    for (let i = 0; i < nums.length - 1; i++) {
+      for (let j = 0; j < nums.length - i - 1; j++) {
+        if (nums[j] > nums[j + 1])
+          [nums[j], nums[j + 1]] = [nums[j + 1], nums[j]];
+      }
+    }
+    return nums;
+  }
+
   bubbleSort_090525_good(nums) {
     for (let i = 0; i < nums.length - 1; i++) {
       for (let j = 0; j < nums.length - i - 1; j++) {
