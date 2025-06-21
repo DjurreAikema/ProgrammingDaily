@@ -24,6 +24,28 @@ class Solutions {
   }
 
   // All solutions
+  isSubtree_210625_good(root, subRoot) {
+    if (!subRoot) return true;
+    if (!root) return false;
+
+    if (this.sameTree(root, subRoot)) return true;
+    return (
+      this.isSubtree(root.left, subRoot)
+      || this.isSubtree(root.right, subRoot)
+    );
+  }
+
+  sameTree_210625_good(root, sub) {
+    if (!root && !sub) return true;
+    if (root !== null && sub !== null && root.val === sub.val) {
+      return (
+        this.sameTree(root.left, sub.left)
+        && this.sameTree(root.right, sub.right)
+      );
+    }
+    return false;
+  }
+
   isSubtree_030625_good(root, subRoot) {
     if (!subRoot) return true;
     if (!root) return false;
