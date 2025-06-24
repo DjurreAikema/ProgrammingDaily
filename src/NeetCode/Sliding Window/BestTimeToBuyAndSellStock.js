@@ -20,6 +20,24 @@ class Solutions {
   }
 
   // All solutions
+  maxProfit_240625_hard(prices) {
+    let l = 0, r = 1;
+    let maxPrice = 0;
+
+    while (r < prices.length) {
+      if (prices[l] < prices[r]) {
+        const profit = prices[r] - prices[l];
+        maxPrice = Math.max(maxPrice, profit);
+      } else {
+        l = r;
+      }
+
+      r++;
+    }
+
+    return maxPrice;
+  }
+
   maxProfit100425(prices) {
     let l = 0, r = 1;
     let maxProfit = 0;
@@ -74,7 +92,7 @@ class Solutions {
   }
 
   maxProfit030125(prices) {
-    let l = 0, r =1;
+    let l = 0, r = 1;
     let maxProfit = 0;
 
     while (r < prices.length) {
