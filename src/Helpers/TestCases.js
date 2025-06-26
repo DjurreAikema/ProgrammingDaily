@@ -4,6 +4,15 @@ import {arrayToTree, treeToArray} from "../DataStructures/BinaryTree.js";
 /**
  * @param {Solution} sol
  */
+export function singleNumberTestCases(sol) {
+  console.log(sol.singleNumber([3, 2, 3]), "2");
+  console.log(sol.singleNumber([7, 6, 6, 7, 8]), "8");
+  console.log(sol.singleNumber([1]), "1");
+}
+
+/**
+ * @param {Solution} sol
+ */
 export function lastStoneWeightTestCases(sol) {
   console.log(sol.lastStoneWeight([2, 3, 6, 2, 4]), "1");
   console.log(sol.lastStoneWeight([1, 2]), "1");
