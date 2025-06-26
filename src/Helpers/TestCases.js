@@ -4,6 +4,14 @@ import {arrayToTree, treeToArray} from "../DataStructures/BinaryTree.js";
 /**
  * @param {Solution} sol
  */
+export function numberOfOneBitsTestCases(sol) {
+  console.log(sol.hammingWeight(0b00000000000000000000000000010111), "4");
+  console.log(sol.hammingWeight(0b01111111111111111111111111111101), "30");
+}
+
+/**
+ * @param {Solution} sol
+ */
 export function singleNumberTestCases(sol) {
   console.log(sol.singleNumber([3, 2, 3]), "2");
   console.log(sol.singleNumber([7, 6, 6, 7, 8]), "8");

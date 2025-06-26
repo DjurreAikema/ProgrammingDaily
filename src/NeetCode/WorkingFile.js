@@ -7,7 +7,7 @@ import {
   invertBinaryTreeTestCases, kthLargestElementInStreamTestCases, lastStoneWeightTestCases,
   linkedListCycleDetectionTestCases,
   maximumDepthOfBinaryTreeTestCases,
-  mergeTwoSortedLinkedListsTestCases,
+  mergeTwoSortedLinkedListsTestCases, numberOfOneBitsTestCases,
   reverseLinkedListTestCases, sameBinaryTreeTestCases, singleNumberTestCases, subtreeOfAnotherTreeTestCases,
   twoSumTestCases,
   validAnagramTestCases,
