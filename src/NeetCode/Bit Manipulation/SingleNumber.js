@@ -10,6 +10,14 @@ class Solutions {
   }
 
   // All solutions
+  singleNumber_270625_good(nums) {
+    let res = 0;
+    for (const num of nums) {
+      res ^= num;
+    }
+    return res;
+  }
+
   singleNumber_260625_first(nums) {
     let res = 0;
     for (const num of nums) {
