@@ -6,6 +6,10 @@ class Solutions {
   }
 
   // All solutions
+  hasDuplicate_300625_hard(nums) {
+    return new Set(nums).size !== nums.length;
+  }
+
   hasDuplicate020225(nums) {
     return new Set(nums).size !== nums.length;
   }
