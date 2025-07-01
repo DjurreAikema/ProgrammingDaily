@@ -2,7 +2,7 @@ import {
   balancedBinaryTreeTestCases,
   bestTimeToBuyAndSellStockTestCases,
   binarySearchTestCases, climbingStairsTestCases,
-  containsDuplicateTestCases,
+  containsDuplicateTestCases, countingBitsTestCases,
   diameterOfBinaryTreeTestCases,
   invertBinaryTreeTestCases, kthLargestElementInStreamTestCases, lastStoneWeightTestCases,
   linkedListCycleDetectionTestCases,
