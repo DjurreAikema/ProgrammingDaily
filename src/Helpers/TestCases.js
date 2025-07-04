@@ -4,6 +4,14 @@ import {arrayToTree, treeToArray} from "../DataStructures/BinaryTree.js";
 /**
  * @param {Solution} sol
  */
+export function reverseBitsTestCases(sol) {
+  console.log(sol.reverseBits(0b0000000000000000000000000010101), "2818572288");
+  console.log(sol.reverseBits(0b0000000000000000000000000010101) === 2818572288 ? "Correct" : "Incorrect")
+}
+
+/**
+ * @param {Solution} sol
+ */
 export function countingBitsTestCases(sol) {
   console.log(sol.countBits(4), "[0,1,1,2,1]");
 }
