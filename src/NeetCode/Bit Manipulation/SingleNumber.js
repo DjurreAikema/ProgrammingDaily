@@ -10,6 +10,14 @@ class Solutions {
   }
 
   // All solutions
+  singleNumber_240725_good(nums) {
+    let res = 0;
+    for (const num of nums) {
+      res ^= num;
+    }
+    return res;
+  }
+
   singleNumber_030725_good(nums) {
     let res = 0;
     for (let num of nums) {
