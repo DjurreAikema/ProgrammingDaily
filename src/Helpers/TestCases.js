@@ -132,6 +132,7 @@ export function validPalindromeTestCases(sol) {
   console.log(sol.isPalindrome("tab a cat"), "False");
   console.log(sol.isPalindrome("ab"), "False");
   console.log(sol.isPalindrome("No lemon, no melon"), "True");
+  console.log(sol.isPalindrome(" "), "True");
 }
 
 /**
