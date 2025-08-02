@@ -212,6 +212,7 @@ export function validParenthesesTestCases(sol) {
   console.log(sol.isValid("[]"), "true");
   console.log(sol.isValid("([{}])"), "true");
   console.log(sol.isValid("[(])"), "false");
+  console.log(sol.isValid("["), "false");
 }
 
 /**
