@@ -21,6 +21,26 @@ class Solutions {
   }
 
   // All solutions
+  maxDepth_020825_hard(root) {
+    const stack = [[root, 1]];
+    let maxDepth = 0;
+
+    while (stack.length) {
+      const curr = stack.pop();
+      const node = curr[0];
+      const depth = curr[1];
+
+      if (node) {
+        maxDepth = Math.max(depth, maxDepth);
+
+        stack.push([node.left, depth + 1]);
+        stack.push([node.right, depth + 1]);
+      }
+    }
+
+    return maxDepth;
+  }
+
   maxDepth_250625_good(root) {
     const stack = [[root, 1]];
     let maxDepth = 0;
