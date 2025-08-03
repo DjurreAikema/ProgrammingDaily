@@ -1,12 +1,41 @@
 //noinspection Duplicates
 class Solutions {
   // Best (so far)
-  isPalindrome101224_best(s) {
+  isPalindrome_best(s) {
+    // Two pointers: left starts at beginning, right starts at end
     let l = 0, r = s.length - 1;
 
     while (l < r) {
-      while (l < r && !alphaNum(s[l])) l++;
-      while (r > l && !alphaNum(s[r])) r--;
+      // Skip non-alphanumeric characters from the left
+      while (l < r && !this.alphaNum(s[l])) l++;
+      // Skip non-alphanumeric characters from the right
+      while (r > l && !this.alphaNum(s[r])) r--;
+
+      // Now we have two alphanumeric characters to compare
+      if (s[l].toLowerCase() !== s[r].toLowerCase()) return false;
+      // Characters match! Move both pointers toward center
+      l++;
+      r--;
+    }
+    // If we made it through the whole string, it's a palindrome!
+    return true;
+  }
+
+  alphaNum(c) {
+    return (
+      c >= 'a' && c <= 'z'
+      || c >= 'A' && c <= 'Z'
+      || c >= '0' && c <= '9'
+    );
+  }
+
+  // All solutions
+  isPalindrome_030825_easy(s) {
+    let l = 0, r = s.length - 1;
+
+    while (l < r) {
+      while (l < r && !this.alphaNum(s[l])) l++;
+      while (r > l && !this.alphaNum(s[r])) r--;
 
       if (s[l].toLowerCase() !== s[r].toLowerCase()) return false;
       l++;
@@ -16,7 +45,14 @@ class Solutions {
     return true;
   }
 
-  // All solutions
+  alphaNum_030825_easy(c) {
+    return (
+      c >= 'a' && c <= 'z'
+      || c >= 'A' && c <= 'Z'
+      || c >= '0' && c <= '9'
+    );
+  }
+
   isPalindrome_250725_good(s) {
     let l = 0, r = s.length - 1;
 
