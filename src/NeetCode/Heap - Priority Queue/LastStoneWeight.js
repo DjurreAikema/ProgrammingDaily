@@ -4,6 +4,34 @@ import {MaxPriorityQueue} from "@datastructures-js/priority-queue";
 class Solutions {
   // Best (so far)
   lastStoneWeight_best(stones) {
+    // Use a MaxPriorityQueue (max heap) to efficiently get the heaviest stones
+    // This automatically keeps the largest element at the front
+    const maxHeap = new MaxPriorityQueue;
+
+    // Add all stones to the priority queue
+    for (const stone of stones) {
+      maxHeap.enqueue(stone);
+    }
+
+    while (maxHeap.size() > 1) {
+      const stone1 = maxHeap.dequeue();
+      const stone2 = maxHeap.dequeue();
+
+      if (stone1 !== stone2) {
+        // Heavier stone (stone1) becomes stone1 - stone2 and goes back
+        maxHeap.enqueue(stone1 - stone2);
+      }
+      // If stone1 === stone2, both stones are destroyed
+    }
+
+    // After all collisions, check what's left:
+    // - If 1 stone remains: return its weight
+    // - If 0 stones remain: return 0
+    return maxHeap.size() === 1 ? maxHeap.dequeue() : 0;
+  }
+
+  // All solutions
+  lastStoneWeight_050825_easy(stones) {
     const maxHeap = new MaxPriorityQueue;
 
     for (const stone of stones) {
@@ -22,7 +50,6 @@ class Solutions {
     return maxHeap.size() === 1 ? maxHeap.dequeue() : 0;
   }
 
-  // All solutions
   lastStoneWeight_240725_hard(stones) {
     let maxHeap = new MaxPriorityQueue;
 
