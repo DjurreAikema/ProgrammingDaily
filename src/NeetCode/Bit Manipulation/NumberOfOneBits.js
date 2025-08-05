@@ -2,6 +2,19 @@
 class Solutions {
   // Best (so far)
   hammingWeight_best(n) {
+    let res = 0; // Count of 1-bits we've found
+    while (n !== 0) { // Keep going until all 1-bits are removed
+
+      // THE MAGIC TRICK: Remove the rightmost 1-bit from n
+      // This operation removes exactly ONE 1-bit each time
+      n &= n - 1;
+      res++;
+    }
+    return res;
+  }
+
+  // All solutions
+  hammingWeight_050825_good(n) {
     let res = 0;
     while (n !== 0) {
       n &= n - 1;
@@ -10,7 +23,6 @@ class Solutions {
     return res;
   }
 
-  // All solutions
   hammingWeight_290725_good(n) {
     let res = 0;
     while (n !== 0) {
