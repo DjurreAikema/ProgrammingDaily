@@ -25,6 +25,14 @@ class Solutions {
   }
 
   // All solutions
+  countBits_070825_hard(n) {
+    let dp = new Array(n + 1).fill(0);
+    for (let i = 1; i <= n; i++) {
+      dp[i] = dp[n >> i] + (i & 1);
+    }
+    return dp;
+  }
+
   countBits_050825_good(n) {
     let dp = new Array(n + 1).fill(0);
     for (let i = 1; i <= n; i++) {
