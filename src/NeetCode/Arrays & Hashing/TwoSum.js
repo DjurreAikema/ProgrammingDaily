@@ -17,6 +17,19 @@ class Solutions {
   }
 
   // All solutions
+  twoSum_190825_good(nums, target) {
+    const seen = new Map();
+    for (let i = 0; i <= nums.length; i++) {
+      const diff = target - nums[i];
+
+      if (seen.has(diff))
+        return [seen.get(diff), i]
+
+      seen.set(nums[i], i);
+    }
+    return [];
+  }
+
   twoSum_030725_good(nums, target) {
     let prevMap = new Map();
 
