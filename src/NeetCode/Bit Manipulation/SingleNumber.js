@@ -21,6 +21,14 @@ class Solutions {
   }
 
   // All solutions
+  singleNumber_190825_good(nums) {
+    let res = 0;
+    for (const num of nums) {
+      res ^= num;
+    }
+    return res;
+  }
+
   singleNumber_060825_hard(nums) {
     while (nums.length > 1) {
 
