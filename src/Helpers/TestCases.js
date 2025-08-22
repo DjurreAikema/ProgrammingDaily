@@ -4,6 +4,15 @@ import {arrayToTree, treeToArray} from "../DataStructures/BinaryTree.js";
 /**
  * @param {Solution} sol
  */
+export function missingNumberTestCases(sol) {
+  console.log(sol.missingNumber([1, 2, 3]), "0");
+  console.log(sol.missingNumber([0, 2]), "1");
+  console.log(sol.missingNumber([3,0,1]), "2");
+}
+
+/**
+ * @param {Solution} sol
+ */
 export function reverseBitsTestCases(sol) {
   console.log(sol.reverseBits(0b0000000000000000000000000010101), "2818572288");
   console.log(sol.reverseBits(0b0000000000000000000000000010101) === 2818572288 ? "Correct" : "Incorrect")
