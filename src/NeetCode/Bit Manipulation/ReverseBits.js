@@ -24,6 +24,15 @@ class Solutions {
   }
 
   // All solutions
+  reverseBits_010925_hard(n) {
+    let res = 0;
+    for (let i = 1; i <= 32; i++) {
+      const bit = (n >>> i) & 1;
+      res += bit << (31 - i);
+    }
+    return res >>> 0;
+  }
+
   reverseBits_280825_hard(n) {
     let res = 0;
     for (let i = 0; i < n; i++) {
