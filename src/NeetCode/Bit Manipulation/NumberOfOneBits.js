@@ -14,6 +14,15 @@ class Solutions {
   }
 
   // All solutions
+  hammingWeight_020925_good(n) {
+    let res = 0;
+    while (n !== 0) {
+      n &= n - 1;
+      res++;
+    }
+    return res;
+  }
+
   hammingWeight_290825_good(n) {
     let res = 0;
     while (n !== 0) {
