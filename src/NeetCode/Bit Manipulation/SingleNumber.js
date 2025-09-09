@@ -21,6 +21,14 @@ class Solutions {
   }
 
   // All solutions
+  singleNumber_090925_easy(nums) {
+    let res = 0;
+    for (let num of nums) {
+      res ^= num;
+    }
+    return res;
+  }
+
   singleNumber_010925_good(nums) {
     let res = 0;
     for (let num of nums) {
