@@ -3,7 +3,7 @@ import {
   bestTimeToBuyAndSellStockTestCases,
   binarySearchTestCases, climbingStairsTestCases,
   containsDuplicateTestCases, countingBitsTestCases,
-  diameterOfBinaryTreeTestCases,
+  diameterOfBinaryTreeTestCases, groupAnagramsTestCases,
   invertBinaryTreeTestCases, kthLargestElementInStreamTestCases, lastStoneWeightTestCases,
   linkedListCycleDetectionTestCases,
   maximumDepthOfBinaryTreeTestCases,

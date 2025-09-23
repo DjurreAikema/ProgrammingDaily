@@ -4,6 +4,15 @@ import {arrayToTree, treeToArray} from "../DataStructures/BinaryTree.js";
 /**
  * @param {Solution} sol
  */
+export function groupAnagramsTestCases(sol) {
+  console.log(sol.groupAnagrams(["act","pots","tops","cat","stop","hat"]), "[[\"hat\"],[\"act\", \"cat\"],[\"stop\", \"pots\", \"tops\"]]");
+  console.log(sol.groupAnagrams(["x"]), "[[\"x\"]]");
+  console.log(sol.groupAnagrams([""]), "[[\"\"]]");
+}
+
+/**
+ * @param {Solution} sol
+ */
 export function missingNumberTestCases(sol) {
   console.log(sol.missingNumber([1, 2, 3]), "0");
   console.log(sol.missingNumber([0, 2]), "1");
