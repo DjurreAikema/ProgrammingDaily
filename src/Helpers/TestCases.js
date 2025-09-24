@@ -188,6 +188,7 @@ export function binarySearchTestCases(sol) {
   console.log(sol.search([-1, 0, 2, 4, 6, 8], 4), "3");
   console.log(sol.search([-1, 0, 2, 4, 6, 8], 3), "-1");
   console.log(sol.search([-1, 0, 3, 5, 9, 12], 9), "4");
+  console.log(sol.search([-1,0,3,5,9,12], 13), "-1");
 }
 
 /**
