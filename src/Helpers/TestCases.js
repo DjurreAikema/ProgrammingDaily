@@ -5,7 +5,7 @@ import {arrayToTree, treeToArray} from "../DataStructures/BinaryTree.js";
  * @param {Solution} sol
  */
 export function groupAnagramsTestCases(sol) {
-  console.log(sol.groupAnagrams(["act","pots","tops","cat","stop","hat"]), "[[\"hat\"],[\"act\", \"cat\"],[\"stop\", \"pots\", \"tops\"]]");
+  console.log(sol.groupAnagrams(["act", "pots", "tops", "cat", "stop", "hat"]), "[['act', 'cat'], ['pots', 'tops', 'stop'], ['hat']]");
   console.log(sol.groupAnagrams(["x"]), "[[\"x\"]]");
   console.log(sol.groupAnagrams([""]), "[[\"\"]]");
 }
@@ -16,7 +16,7 @@ export function groupAnagramsTestCases(sol) {
 export function missingNumberTestCases(sol) {
   console.log(sol.missingNumber([1, 2, 3]), "0");
   console.log(sol.missingNumber([0, 2]), "1");
-  console.log(sol.missingNumber([3,0,1]), "2");
+  console.log(sol.missingNumber([3, 0, 1]), "2");
 }
 
 /**
@@ -188,7 +188,7 @@ export function binarySearchTestCases(sol) {
   console.log(sol.search([-1, 0, 2, 4, 6, 8], 4), "3");
   console.log(sol.search([-1, 0, 2, 4, 6, 8], 3), "-1");
   console.log(sol.search([-1, 0, 3, 5, 9, 12], 9), "4");
-  console.log(sol.search([-1,0,3,5,9,12], 13), "-1");
+  console.log(sol.search([-1, 0, 3, 5, 9, 12], 13), "-1");
 }
 
 /**
