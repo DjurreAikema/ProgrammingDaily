@@ -12,6 +12,16 @@ class Solutions {
   }
 
   // All solutions
+  climbStairs_270925_hard(n) {
+    const cache = [];
+    const dfs = (i) => {
+      if (i >= n) return i === n;
+      if (cache[i]) return cache[i];
+      cache[i] = dfs(1) + dfs(2);
+    }
+    return dfs(0);
+  }
+
   climbStairs_250725_easy(n) {
     const cache = new Array(n).fill(-1);
     const dfs = (i) => {
