@@ -14,6 +14,12 @@ class Solutions {
   }
 
   // All solutions
+  bubbleSort_270925_hard(arr) {
+    // for (let i = 0; i < arr.length; i++) {
+    //   for (let j =)
+    // }
+  }
+
   bubbleSort_200625_good(nums) {
     for (let i = 0; i < nums.length - 1; i++) {
       for (let j = 0; j < nums.length - i - 1; j++) {
