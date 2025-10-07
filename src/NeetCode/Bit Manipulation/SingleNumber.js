@@ -21,6 +21,17 @@ class Solutions {
   }
 
   // All solutions
+  singleNumber_071025_hard(nums) {
+    const n = nums.length - 1;
+    let xorr = n;
+
+    for (let i = 0; i <= n; i++) {
+      xorr ^= i ^ nums[i];
+    }
+
+    return xorr;
+  }
+
   singleNumber_270925_hard(nums) {
     let res = 0;
     for (let num in nums) {
