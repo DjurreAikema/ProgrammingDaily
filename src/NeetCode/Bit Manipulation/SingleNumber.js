@@ -21,6 +21,14 @@ class Solutions {
   }
 
   // All solutions
+  singleNumber_141025_easy(nums) {
+    let res = 0;
+    for (const num of nums) {
+      res ^= num;
+    }
+    return res;
+  }
+
   singleNumber_071025_hard(nums) {
     const n = nums.length - 1;
     let xorr = n;
