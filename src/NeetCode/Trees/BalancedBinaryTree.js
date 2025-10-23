@@ -32,6 +32,36 @@ class Solutions {
   }
 
   // All solutions
+  isBalanced_231025_hard(root) {
+    if (!root) return true;
+
+    const stack = [root];
+    const seen = new Map();
+    seen.set(null, 0);
+
+    while (stack.length) {
+      let node = stack[stack.length - 1];
+
+      if (node.left && !seen.has(node.left)) {
+        stack.push(node.left);
+      } else if (node.right && !seen.has(node.right)) {
+        stack.push(node.right);
+      } else {
+        node = stack.pop();
+
+        const leftH = seen.get(node.left);
+        const rightH = seen.get(node.right);
+
+        if (Math.abs(leftH - rightH) > 1) return false;
+
+        const height = Math.max(leftH, rightH);
+        seen.set(node, height);
+      }
+    }
+
+    return seen.get(root);
+  }
+
   isBalanced_190925_good(root) {
     if (!root) return true
 
