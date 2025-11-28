@@ -26,6 +26,29 @@ class Solutions {
   }
 
   // All solutions
+  isValid_281125_hard(s) {
+    const stack = [];
+    const closeToOpen = {
+      '}': '{',
+      ')': '(',
+      ']': '['
+    }
+
+    for (let c of s) {
+      if (closeToOpen[c]) {
+        if (stack.length > 0 && stack[stack.length - 1] === closeToOpen[c]) {
+          stack.pop();
+        } else {
+          return false;
+        }
+      } else {
+        stack.push(c);
+      }
+    }
+
+    return true;
+  }
+
   isValid_100925_easy(s) {
     const stack = [];
     const closeToOpen = {
