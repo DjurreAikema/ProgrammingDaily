@@ -26,6 +26,30 @@ class Solutions {
   }
 
   // All solutions
+  mergeTwoLists_021225_hard(list1, list2) {
+    if (!list1 || !list2) return null;
+    let head = {prev: null, value: 0};
+
+    while (list1.next && list2.next) {
+      if (list1.val < list2.val) {
+        head.next = list1;
+        list1 = list1.next;
+      } else {
+        head.next = list2;
+        list2 = list2.next;
+      }
+      head = head.next;
+    }
+
+    if (list1) {
+      head.next = list1;
+    } else {
+      head.next = list2;
+    }
+
+    return head.next;
+  }
+
   mergeTwoLists_190825_easy(list1, list2) {
     let dummy = {value: 0, next: null};
     let head = dummy;
