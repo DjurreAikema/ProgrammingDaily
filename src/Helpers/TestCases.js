@@ -58,6 +58,7 @@ export function lastStoneWeightTestCases(sol) {
   console.log(sol.lastStoneWeight([2, 3, 6, 2, 4]), "1");
   console.log(sol.lastStoneWeight([1, 2]), "1");
   console.log(sol.lastStoneWeight([2, 2]), "0");
+  console.log(sol.lastStoneWeight([1, 3]), "2");
 }
 
 /**
