@@ -31,6 +31,34 @@ class Solutions {
   }
 
   // All solutions
+  diameterOfBinaryTree_091225_hard(root) {
+    const stack = [root];
+    const seen = new Map();
+    seen.set(null, [0, 0]);
+
+    while (stack.length) {
+      let node = stack[stack.length - 1];
+
+      if (node.left && !seen.has(node.left)) {
+        stack.push(node.left);
+      } else if (node.right && !seen.has(node.right)) {
+        stack.push(node.right);
+      } else {
+        node = stack.pop();
+
+        const [lHeight, lDiameter] = seen.get(node.left);
+        const [rHeight, rDiameter] = seen.get(node.right);
+
+        const height = 1 + Math.max(lHeight, rHeight);
+        const diameter = Math.max(lHeight + rHeight, Math.max(lDiameter, rDiameter));
+
+        seen.set(node, [height, diameter]);
+      }
+    }
+
+    return seen.get(root)[1];
+  }
+
   diameterOfBinaryTree_280825_easy(root) {
     const stack = [root];
     const seen = new Map();
