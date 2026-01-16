@@ -21,6 +21,16 @@ class Solutions {
   }
 
   // All solutions
+  singleNumber_160126_hard(nums) {
+    let res = 0;
+
+    for (const num of nums) {
+      res ^= num;
+    }
+
+    return res;
+  }
+
   singleNumber_231025_easy(nums) {
     let res = 0;
     for (const num of nums) {
