@@ -14,6 +14,17 @@ class Solutions {
   }
 
   // All solutions
+  bubbleSort_270126_hard(nums) {
+    for (let i = 0; i < nums.length - 1; i++) {
+      for (let j = 0; j < nums.length - 1 - j; j++) {
+        if (nums[j] > nums[j + 1])
+          [nums[j], nums[j + 1]] = [nums[j + 1], nums[j]];
+      }
+    }
+
+    return nums;
+  }
+
   bubbleSort_270925_hard(arr) {
     // for (let i = 0; i < arr.length; i++) {
     //   for (let j =)
