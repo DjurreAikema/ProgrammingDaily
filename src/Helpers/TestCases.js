@@ -32,6 +32,7 @@ export function reverseBitsTestCases(sol) {
  */
 export function countingBitsTestCases(sol) {
   console.log(sol.countBits(4), "[0,1,1,2,1]");
+  console.log(sol.countBits(0), "[0]");
 }
 
 /**
