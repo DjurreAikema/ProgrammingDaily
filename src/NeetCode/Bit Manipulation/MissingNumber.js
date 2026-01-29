@@ -27,6 +27,15 @@ class Solutions {
   }
 
   // All solutions
+  missingNumber_290126_hard(nums) {
+    let n = nums.length;
+    let xorr = n;
+    for (let i = 0; i < n; i++) {
+      xorr ^= nums[i] ^ i;
+    }
+    return xorr;
+  }
+
   missingNumber_200126_hard(nums) {
     let n = nums.length;
     let xorr = n;
