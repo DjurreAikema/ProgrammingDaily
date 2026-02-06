@@ -31,6 +31,25 @@ class Solutions {
   }
 
   // All solutions
+  lastStoneWeight_060226_easy(stones) {
+    const queue = new MaxPriorityQueue();
+
+    for (const stone of stones) {
+      queue.enqueue(stone);
+    }
+
+    while (queue.size() > 1) {
+      const stone1 = queue.dequeue();
+      const stone2 = queue.dequeue();
+
+      if (stone1 !== stone2) {
+        queue.enqueue(stone1 - stone2)
+      }
+    }
+
+    return queue.size() === 1 ? queue.dequeue() : 0;
+  }
+
   lastStoneWeight_091225_hard(stones) {
     const stack = new MaxPriorityQueue();
 
